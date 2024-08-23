@@ -1,0 +1,1 @@
+export const CartUrl = 'https://fakestoreapi.com/products'
