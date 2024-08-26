@@ -51,7 +51,7 @@ code {
 }
 
 
-.count{
+/* .count{
  
     animation: in 4s linear 0s infinite normal;
     font-size: 30px;
@@ -67,4 +67,19 @@ code {
   to {
     transform: translateY(5px);
   }
+} */
+
+
+
+@media only screen and (max-width: 500px) {
+.product img{
+  width:150px;
+  height: 150px;
+  margin-left: 40px;
+  
+}
+.product{
+  width: 18rem;
+  
+}
 }

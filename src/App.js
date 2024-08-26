@@ -8,6 +8,7 @@ import { Cart } from './Pages/Cart';
 
 
 
+
 function App() {
 
   return (
@@ -16,6 +17,7 @@ function App() {
       
 
       <Navbar />
+      
      
 
       <Routes>

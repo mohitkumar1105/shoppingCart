@@ -48,7 +48,7 @@ export const Product = ({ ele }) => {
 
     return (
         <div className="col-md-3 mb-4 gap-3">
-            <div key={ele.id} class=" h-100 p-4 text-center ms-5 card" style={{ boxShadow: " 12px 12px 2px 1px rgba(0, 0, 255, .2" }}>
+            <div key={ele.id} class="product h-100 p-4 text-center ms-5 card" style={{ boxShadow: " 12px 12px 2px 1px rgba(0, 0, 255, .2" }}>
 
                 <img src={ele.image} class="card-img-top" height="300px" width="250px" alt="..." />
               
