@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { CartItem } from "../components/CartItem";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { FaLuggageCart } from "react-icons/fa";
 
 
@@ -10,6 +10,7 @@ export const Cart = () => {
 
     const [total, setTotal] = useState(0)
 
+
     const { cart } = useSelector((state) => state)
 
     useEffect(() => {
@@ -17,6 +18,12 @@ export const Cart = () => {
             return Math.floor(total + num.price)
         }, 0))
     }, [cart])
+
+
+
+
+
+
 
 
 
@@ -47,7 +54,7 @@ export const Cart = () => {
                         </div>
                     </div> :
 
-                    <div className=" border-dark border-bottom border-52 ">
+                    <div className="container-fluid mb-5 ">
 
                         {
                             cart.map((ele) => {
@@ -60,11 +67,33 @@ export const Cart = () => {
                             })
                         }
 
-
                         <div>
-
-                            <h2 style={{textAlign:"end"}}>{`Total Amount ₹${total}`}</h2>
+                            <h4 style={{ textAlign: "center", background: "greenyellow", }}>Order summary</h4>
                         </div>
+
+
+                        <div className=" d-flex justify-content-between">
+                            <p>Price</p>
+                            <p>{`₹${total}`}</p>
+                        </div>
+
+                        <div className=" d-flex justify-content-between">
+                            <p>Delivey Fee</p>
+                            <p>Free</p>
+                        </div>
+
+
+                        <div className=" d-flex justify-content-between">
+                            <p>Total Price</p>
+                            <p>{`₹${total}`}</p>
+                        </div>
+
+
+                        <NavLink to="/payment" style={{display:"flex", justifyContent:"center", alignItems:"center",textDecoration:"none"}} >
+                            <button style={{outline:"none" , border:"none",borderRadius:"50px"  ,textAlign: "center", color:"black", background: "greenyellow", cursor:"pointer", padding:"0 60px" }}>Pay Now</button>
+
+                        </NavLink>
+
 
                     </div>
 
